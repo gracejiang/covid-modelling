@@ -11,9 +11,9 @@ We wanted to conduct an experiment to see how safety guidelines such as social d
 ---
 
 
-### I. Experiment Setup
+## I. Experiment Design 🎨
 
-**A. Independent Variables**
+### A. Independent Variables
 
 We modified 2 independent variables in this experiment:
 
@@ -27,7 +27,7 @@ We modified 2 independent variables in this experiment:
 
 
 
-**B. Control Variables**
+### B. Control Variables
 
 While testing each of the independent variables, we treated all the other independent variables as control variables, each with their own default value as listed below:
 
@@ -42,7 +42,7 @@ Some other control variables that we kept constant were:
 
 
 
-**C. Dependent Variables**
+### C. Dependent Variables
 
 Finally, we looked to several dependent variables to measure the impacts of the independent variables on the spread and impact of the virus. We kept track of several metrics, such as:
 
@@ -53,13 +53,13 @@ Finally, we looked to several dependent variables to measure the impacts of the 
 
 ---
 
-### II. Analysis
+## II. Analysis 📊
 
 To measure how much social distancing and wearing a mask affected the infectiousness and impact of the virus, we looked at two main reporters: % of population affected by the virus and % of population died by the virus.
 
 Here were our summarized results:
 
-**Social Distancing**
+### A. Social Distancing
 
 ```
 pd.pivot_table(df, index=['density-people'], values = ['pct-affected'], aggfunc = [np.mean])
@@ -76,7 +76,7 @@ pd.pivot_table(df, index=['density-people'], values = ['pct-affected'], aggfunc 
 
 Our results show a positive correlation between the density of people (lower social distancing) and the percentage of people affected and dead from the virus.
 
-**Wearing Masks**
+### B. Wearing Masks
 
 ```
 pd.pivot_table(df, index=['pct-wearing-masks'], values = ['pct-affected'], aggfunc = [np.mean])
@@ -100,7 +100,7 @@ To see our full results, please check out our pandas files and our [documentatio
 ---
 
 
-### III. Conclusion
+## III. Conclusion 🏥
 
 In conclusion, our model validates how two key safety guidelines, social distancing and mask-wearing, can decrease the rates of infection transmission and mortality. 
 
