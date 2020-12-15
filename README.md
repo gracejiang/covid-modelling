@@ -59,7 +59,39 @@ To measure how much social distancing and wearing a mask affected the infectious
 
 Here were our summarized results:
 
+**Social Distancing**
 
+```
+pd.pivot_table(df, index=['density-people'], values = ['pct-affected'], aggfunc = [np.mean])
+```
+
+| pct-wearing-masks | pct-affected mean |
+|-------------------|-------------------|
+| 0                 | 79.171640         |
+| 20                | 75.796601         |
+| 40                | 74.638007         |
+| 60                | 63.949679         |
+| 80                | 45.319220         |
+| 100               | 9.954145          |
+
+Our results show a positive correlation between the density of people (lower social distancing) and the percentage of people affected and dead from the virus.
+
+**Wearing Masks**
+
+```
+pd.pivot_table(df, index=['pct-wearing-masks'], values = ['pct-affected'], aggfunc = [np.mean])
+```
+
+| pct-wearing-masks | pct-affected mean |
+|-------------------|-------------------|
+| 0                 | 79.171640         |
+| 20                | 75.796601         |
+| 40                | 74.638007         |
+| 60                | 63.949679         |
+| 80                | 45.319220         |
+| 100               | 9.954145          |
+
+Our results show negative correlation between the percentage of the population wearing a mask and the percentage of people affected and dead from the virus.
 
 To see our full results, please check out our pandas files and our [documentation](https://github.com/gracejiang/covid-modelling/blob/master/Documentation.pdf).
 
